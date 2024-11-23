@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- 设置页面的字符编码为UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- 页面标题 -->
+  <title>docsify-demo</title>
+  <!-- 兼容IE浏览器的设置，优先使用最新的IE版本或者Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 页面的描述信息，用于搜索引擎等场景对页面内容的简单描述 -->
+  <meta name="description" content="Description">
+  <!-- 设置页面的视口相关属性，如宽度跟随设备宽度，禁止用户缩放，初始缩放比例、最大缩放比例、最小缩放比例都设置为1.0 -->
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 引入docsify的主题样式文件（这里是vue.css样式），使用unpkg.com的CDN链接 -->
+  <!-- <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/pure.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css"> -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css">
+</head>
+
+<body>
+  <!-- 页面中一个用于挂载docsify应用的DOM元素，id为app -->
+  <div id="app"></div>
+  <!-- 用于实现docsify在GitHub上编辑的相关功能，这里是一个注释标识 -->
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+  <script>
+    window.$docsify = {
+      // 设置docsify应用的名称
+      name: 'Elmer的博客',
+      // 设置对应的GitHub仓库地址，用于关联文档与仓库等相关操作
+      repo: 'https://github.com/Elmer-creat?tab=repositories',
+      // 最大支持渲染的标题层级为5级
+      maxLevel: 5,
+      // 子标题最大支持渲染层级为3级
+      subMaxLevel: 3,
+      // 指定首页对应的文档路径（这里是README.md）
+      homepage: 'README.md',
+      // 是否启用封面页，设置为true表示启用
+      coverpage: true,
+      // 是否加载侧边栏，设置为true表示加载
+      loadSidebar: true,
+      //开启导航栏
+      loadNavbar: true,
+      // 切换页面后是否自动跳转到页面顶部，设置为true表示自动跳转
+      auto2top: true,
+      // 全文搜索相关配置开始 -->
+      search: {
+        // 以下是对各搜索配置项的注释，当前行被注释掉了，原作用是设置搜索结果的过期时间（单位毫秒，默认一天），若取消注释可自定义过期时长
+        // maxAge: 86400000, 
+        // 设置搜索路径为自动模式，docsify会自动查找合适的搜索路径
+        paths: 'auto',
+        // 搜索框的占位提示文字
+        placeholder: '搜索',
+        // 当搜索没有结果时显示的提示文字
+        noData: '找不到结果',
+        // 搜索标题的最大层级范围是1 - 6，这里设置为3，表示最多搜索到3级标题
+        depth: 3,
+      },
+      // 插件相关配置，这里创建并添加了一个用于在GitHub上编辑的插件，传入对应的GitHub仓库文件路径作为参数
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/Snailclimb/JavaGuide-Interview/blob/master/')
+      ],
+    }
+  </script>
+  <!-- 引入docsify的核心库文件，通过unpkg.com的CDN链接获取 -->
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <!-- 引入用于Java代码高亮显示的脚本文件，通过unpkg.com的CDN链接获取 -->
+  <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+  <!-- 引入全文搜索的插件脚本文件，这里使用了cdn.bootcss.com的CDN链接，因为直接用官方提供的无法生效 -->
+  <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+  <!-- 引入用于将代码复制到剪贴板功能的脚本文件，通过unpkg.com的CDN链接获取 -->
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  <!-- 引入用于图片缩放功能的插件脚本文件，通过unpkg.com的CDN链接获取 -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <!-- 引入用于字数统计功能的脚本文件，通过unpkg.com的CDN链接获取 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+</body>
+
+</html>
